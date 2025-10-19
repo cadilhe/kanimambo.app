@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Busca Localizada",
+    description:
+      "Mostre o seu estabelecimento quando as pessoas estiverm nas proximidades.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Maps SEO",
+    description:
+      "Apareça nos mapas virtuais e torne fácil para as pessoas chegarem até você.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Marketing de Conteúdo",
+    description:
+      "Construia autoridade no seu ramo entregando conteúdo de valor para seu público.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Trâfego pago",
+    description:
+      "Anunciar na internet é mais barato e fácil do do que se imagina e traz mais resultados.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Sites Personalizados",
+    description:
+      "Entregas rápidas de sites bonitos e fáceis de administrar para qualquer projeto.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Fluxo de Email",
+    description:
+      "Capture emails de potenciais clientes e construa um relacionamento inteligente.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Tudo o que você precisa para crescer online
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Pegamos as melhores partes das ferramentas mais modernas e adicionamos nossas próprias inovações personalizadas para o seu negócio.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
